@@ -63,13 +63,13 @@ async def parse_deal(message: types.Message):
 
 @dp.message_handler(commands=["release"])
 async def release(message: types.Message):
-    if message.from_user.id not in [8110009397]:  # ЗАМЕНИ на свой Telegram user_id
+    if message.from_user.id not in [8110009397]:  
         return await message.answer("⛔ Только гарант может использовать эту команду.")
     await message.answer("Введите ID сделки для перевода средств покупателю.")
 
 @dp.message_handler(commands=["cancel"])
 async def cancel(message: types.Message):
-    if message.from_user.id not in [8110009397]:  # ЗАМЕНИ на свой Telegram user_id
+    if message.from_user.id not in [8110009397]: 
         return await message.answer("⛔ Только гарант может использовать эту команду.")
     await message.answer("Введите ID сделки для отмены и возврата продавцу.")
 
